@@ -1,0 +1,27 @@
+	.Image { grid-area: image; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
+	.Title { grid-area: title; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
+	.Text { grid-area: text; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
+	.Details { grid-area: details; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
+	
+	.grid-container {
+		margin-left: 25px;
+		margin-right: 25px;
+	  display: grid;
+	  grid-template-areas:
+		'image title title details details'
+		'image text text details details'
+		'image text text details details'
+		'image text text details details'
+		'image text text details details';
+	}
+	
+	.ProductDivider {
+		 border-width: 2px;
+		 border-color: black;
+	}
+	
+	.imageThumbnail {
+
+		max-height:  300px;
+		max-width: 400px;
+	}

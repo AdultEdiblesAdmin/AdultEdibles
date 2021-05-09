@@ -4,12 +4,12 @@
 
   <head>
     <link type="text/css" rel="stylesheet" href="../css/ProfileSite.css" />
-    <link type="text/css" rel="stylesheet" href="../css/AllProducts.css" >
+    <link type="text/css" rel="stylesheet" href="../css/OrderForm.css" >
 
     <script src="../js/IncludeHtmlScript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="../Data/Data.js"></script>
-    <script type="text/javascript" src="../Scripts/allProducts.js"></script>
+    <script type="text/javascript" src="../Scripts/order.js"></script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -41,9 +41,33 @@
 
   <div class="grid_body" style="margin-top: 25px;">
     <div class="Grid_Main">
-      <div class="Shadow_Container" style="background-color: var(--main-theme-color1); color: var(--main-theme-color2);">
-        
-      </div>
+      <table id="CatalogTable">
+          <thead>
+              <tr>
+                  <th>Variety / Flavor</th>
+                  <th>THC Content</th>
+                  <th>Cost Ea.</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+              </tr>
+          </thead>
+          <tbody>
+          
+          
+          </tbody>
+      </table>
+      <table style="float: right;">
+          <thead>
+              <tr>
+                  <th>Total Cost</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td id="OrderCost">$0.00</td>
+              </tr>
+          </tbody>
+      </table>
     </div>
   </div>
   

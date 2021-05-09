@@ -23,16 +23,22 @@ function AddProductToList(product, i) {
 	
 	var parser = new DOMParser();
 
-	fetch("https://adultediblesadmin.github.io/AdultEdibles/Pages/nav.html")
+	fetch("https://adultediblesadmin.github.io/AdultEdibles/Controls/ProductItemView.html")
       .then(response => {
         return response.text();
     })
       .then(data => {
 		
-		var productItemView = parser.parseFromString(data, 'text/html');
+		var dom = parser.parseFromString(data, 'text/html');
+		var imageLocation = "../Images/" + product.Image;
 		
-		productItemView.find('#ProducTitle').val(product.ProductTitle);
+		$(dom.getElementsByTagName("div")[0]).find("#ImageLocation").attr("src",imageLocation);
+		$(dom.getElementsByTagName("div")[0]).find("#ProductName").text(product.ProductName);
 
+		
+		var productItemView = $(dom.getElementsByTagName("div")[0]);
+
+		
 		$('.AllProductsList').append(productItemView);
 
 

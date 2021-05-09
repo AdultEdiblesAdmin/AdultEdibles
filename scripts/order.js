@@ -50,7 +50,7 @@ function AddProductToCatalog(product, i) {
 	var td = document.createElement("td");
 	td.classList.add("hover_img");
 	td.classList.add("ProductName");
-	var imageLocation = "./Images/" + product.Image;
+	var imageLocation = "../Images/" + product.Image;
 	
 	var a = document.createElement("a");
 	a.setAttribute("href", imageLocation);

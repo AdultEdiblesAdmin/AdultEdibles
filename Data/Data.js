@@ -9,7 +9,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "1.JPG"
+			"Image": "1.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  2,
@@ -20,7 +21,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "2.JPG"
+			"Image": "2.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  3,
@@ -31,7 +33,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "3.JPG"
+			"Image": "3.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  4,
@@ -42,7 +45,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "4.JPG"
+			"Image": "4.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  5,
@@ -53,7 +57,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "5.JPG"
+			"Image": "5.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  6,
@@ -64,7 +69,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "6.JPG"
+			"Image": "6.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  7,
@@ -75,7 +81,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "7.JPG"
+			"Image": "7.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  8,
@@ -86,7 +93,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "8.JPG"
+			"Image": "8.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  9,
@@ -97,7 +105,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "9.JPG"
+			"Image": "9.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  10,
@@ -108,7 +117,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "10.JPG"
+			"Image": "10.JPG",
+			"Description": "Some description"
 		},
 		{
 			"ID":  11,
@@ -119,7 +129,8 @@ ProductData = `{
 			"LeftInStock": 100,
 			"Tags": [ "Tag1", "Tag2" ],
 			"Category" : "Snack",
-			"Image": "11.JPG"
+			"Image": "11.JPG",
+			"Description": "Some description"
 		}
 	]
 }`;

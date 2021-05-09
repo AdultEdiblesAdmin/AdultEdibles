@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Adult Edibles Catalog</title>
+    <link rel="stylesheet" href="style/OrderForm.css" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Data/Data.js"></script>
+    <script type="text/javascript" src="scripts/order.js"></script>
+
+</head>
+<body onload="LoadProducts();">
+    
+    <div class="grid-container">
+        <div class="Header">Header</div>
+        <div class="Left">Left</div>
+        <div class="Middle">
+            <table id="CatalogTable">
+                <thead>
+                    <tr>
+                        <th>Variety / Flavor</th>
+                        <th>THC Content</th>
+                        <th>Cost Ea.</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                
+                </tbody>
+            </table>
+            <table style="float: right;">
+                <thead>
+                    <tr>
+                        <th>Total Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="OrderCost">$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+        <div class="Right">Right</div>
+        <div class="Footer">Footer</div>
+    </div>
+    
+</body>
+</html>

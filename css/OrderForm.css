@@ -1,0 +1,48 @@
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+
+.Header { grid-area: header; }
+.Left { grid-area: left; }
+.Middle { grid-area: middle; }
+.Right { grid-area: right; }
+.Footer { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'left middle middle middle right'
+    'footer footer footer footer footer';
+}
+
+
+thead th {
+  background-color: black;
+  color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+#CatalogTable {
+	width: 100%
+}
+table {
+	border-collapse: collapse;
+}
+
+td {
+	padding: 5px;
+	border: solid 1px black;
+    
+}
+
+.Quantity {
+	float: right;
+	width: inherit;
+	padding: 5px 10px 5px 10px;
+}
+
+.imageThumbnail {
+    max-height: 300px;
+}

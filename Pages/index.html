@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <link type="text/css" rel="stylesheet" href="../css/ProfileSite.css" />
+    <link rel="stylesheet" href="style/OrderForm.css" >
+
+    <script src="../js/IncludeHtmlScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Data/Data.js"></script>
+    <script type="text/javascript" src="scripts/order.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Fetch the header and nav inner html, append to header and nav elements-->
+    <script>
+
+    fetch("https://tucke102.github.io/TylerTuckersProfile/Pages/header.html")
+      .then(response => {
+        return response.text();
+    })
+      .then(data => {
+        document.querySelector("header").innerHTML = data;
+    });
+      
+    fetch("https://tucke102.github.io/TylerTuckersProfile/Pages/nav.html")
+      .then(response => {
+        return response.text();
+    })
+      .then(data => {
+        document.querySelector("nav").innerHTML = data;
+    });
+    </script>
+    
+  </head>
+
+<body onload="LoadProducts();">
+  <header></header>
+  <nav class="Grid_Nav"></nav>
+
+  <div class="grid_body" style="margin-top: 25px;">
+    <div class="Grid_Main">
+      <div class="Shadow_Container" style="background-color: var(--main-theme-color1); color: var(--main-theme-color2);">
+        <table id="CatalogTable">
+                <thead>
+                    <tr>
+                        <th>Variety / Flavor</th>
+                        <th>THC Content</th>
+                        <th>Cost Ea.</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                
+                </tbody>
+            </table>
+            <table style="float: right;">
+                <thead>
+                    <tr>
+                        <th>Total Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="OrderCost">$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    includeHTML();
+  </script>
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,345 @@
+  
+  body {
+    margin: 0px;
+    color: #303030;
+  }
+  
+  :root {
+  --nav-theme-color1: #373737;
+  --nav-theme-color2: white;
+  --main-theme-color1: #303030;
+  --main-theme-color2: white;
+  --slider-image-width: 80vw;
+  --slider-image-heigth: 70vh;
+}
+
+
+  table, th, td {
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+  * {
+  box-sizing: border-box;
+}
+
+/*Grid layout config*/
+.Grid_HeaderLeft {
+  grid-area: headerLeft;
+  background-color: var(--main-theme-color1);
+  text-align: center;
+  color: white;
+  font-size: 3vw;
+  }
+  
+.Grid_HeaderRight {
+  grid-area: headerRight;
+  background-color: var(--main-theme-color1);
+  }
+.Grid_Nav {
+  grid-area: nav;
+  position: sticky;
+  top:0;
+  }
+
+.Grid_Main { grid-area: main; }
+.Grid_MainL { grid-area: mainL; text-align: center;}
+.Grid_MainM { grid-area: mainM; text-align: center;}
+.Grid_MainM_Header { grid-area: mainHeader; text-align: center;}
+.Grid_MainR { grid-area: mainR; text-align: center;}
+.Grid_Footer { grid-area: footer; }
+
+.grid-header {
+  display: grid;
+  grid-template-areas:
+    ' headerLeft headerRight';
+  grid-gap: 0px;
+  padding: 0px;
+}
+
+.Grid_Main_L { grid-area: Left; }
+.Grid_Main_R { grid-area: Right; }
+.grid-screenshot {
+  display: grid;
+  grid-template-areas:
+    ' Left Right';
+  grid-gap: 10px;
+  padding: 0px;
+}
+
+.grid_body {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-areas:
+    ' . main .';
+  grid-gap: 0px;
+  padding: 0px;
+}
+
+.grid_body_3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    ' . mainHeader .'
+    ' mainL mainM mainR';
+  grid-gap: 0px;
+  padding: 0px;
+}
+
+
+/*Set every other body layer with a different theme color*/
+[class^="grid_body"]:nth-of-type(even) {
+  background: var(--main-theme-color1);
+  color: var(--main-theme-color1);
+  
+}
+
+/*Set every other body layer with a different theme color*/
+[class^="grid_body"]:nth-of-type(odd) {
+  background: var(--main-theme-color2);
+  color: var(--main-theme-color1);
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+
+  ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+	}
+	ul.nav .active {
+		background-color: white;
+		color: var(--nav-theme-color1);
+	}			  
+	/* Add a gray right border to all list items, except the last item (last-child) */
+	ul.nav li {
+		border-right: 1px solid white;
+	}
+	
+	ul.nav li:last-child {
+		border-right: none;
+	}
+	
+	ul.nav li {
+		float: left;
+	}
+	
+	ul.nav li a {
+		display: block;
+		color: var(--nav-theme-color2);
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 2vw;
+	}
+	
+	/* Change the link color to #111 (black) on hover */
+	ul.nav li a:hover {
+		background-color: var(--nav-theme-color2);
+		color: var(--nav-theme-color1);
+	}
+	
+
+
+.avatar {
+  width: 25vw;
+  height: 100%;
+  float: right;
+}
+
+img {
+    image-orientation: from-image;
+}
+
+.ProfileLabel {
+  font-size: 1vw;
+  color: var(--nav-theme-color1);
+  padding: 5px;
+  width: 15vw;
+  background-color: var(--main-theme-color2);
+  text-align: center;
+  margin-left: 10vw;
+}
+
+.center {
+  margin: auto;
+  line-height: 1vw;
+  padding: 10px;
+  height: 20vw;
+  border: 3px solid blue;
+}
+
+.Shadow_Container {
+  background-color: white;
+  border-radius: 30px;
+  border: solid 1px #373737;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  font-size: 1vw;
+}
+
+.Skill_Container {
+  width: 20vw;
+  border: solid 1px black;
+  border-radius: 50%;
+}
+
+
+.Slider_Description_Container{
+  padding:2vw;
+  background-color: var(--main-theme-color1);
+}
+.Slider_Description_Container p {
+  color: var(--main-theme-color1);
+  background-color: var(--main-theme-color2);
+  padding: 10px;
+  font-size: 3vh;
+  border-radius: 15px;
+}
+
+.Slider_Description_Container i {
+  color: var(--main-theme-color2);
+  padding: 5px;
+  font-size: 2vh;
+}
+
+
+.Slider_Description_Container h1{
+  color: var(--main-theme-color2);
+  margin: 0px;
+/*  font-size: 6vw;*/
+}
+
+.Slider_Description_Container h3{
+  color: var(--main-theme-color2);
+/*  font-size: 4vw;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

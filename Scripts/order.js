@@ -21,6 +21,27 @@ function UpdateTotal() {
 	$("#OrderCost").text('$' + totalOrderCost);
 }
 
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+function CheckoutOrder() {
+	
+
+	var body = `
+			<ul class="nav">
+			  <li><a href="index.html">Home Page</a></li>
+			  <li><a href="OrderProducts.html">Order</a></li>
+			  <li><a href="AllProducts.html">Products</a></li>
+			  <li style="float:right"><a href="https://adultediblesadmin.github.io/AdultEdibles/">About</a></li>
+			</ul>`;
+
+
+	window.open("mailto:Adultediblescatalog@gmail.com?subject=Order Number: " + uuidv4() + "&body=" + encodeURIComponent(body));
+}
 
 
 //<tr>

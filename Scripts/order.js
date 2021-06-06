@@ -1,24 +1,38 @@
 
 //Adultediblescatalog@gmail.com
+var TotalOrderCost = 0;
+var OrderedProductsList = [];
 
 function UpdateTotal() {
 	
 	console.log("Fired");
+	OrderedProductsList = [];
 	
-	var totalOrderCost = 0;
-	$('#CatalogTable tbody tr').each(function() { 
+	TotalOrderCost = 0;
+	$('#CatalogTable tbody tr').each(function() {
+		var productName = $(this).find(".ProductName a").text();
 		var quantity = $(this).find(".Quantity").val();
 		var price = parseFloat($(this).find(".Price").text().substring(1));
 		
 		var total = $(this).find(".TotalPrice");
 		
-		totalOrderCost = totalOrderCost + (price*quantity);
+		if (Number(quantity) > 0) {
+			var product = {};
+				product.Name = productName;
+				product.Quantity = quantity;
+				product.Price = price*quantity;
+
+		
+				OrderedProductsList.push(product);
+		}
+		
+		TotalOrderCost = TotalOrderCost + (price*quantity);
 		total.text('$' + price*quantity);
 		
 		console.log(total.text());
 	});
 	
-	$("#OrderCost").text('$' + totalOrderCost);
+	$("#OrderCost").text('$' + TotalOrderCost);
 }
 
 function uuidv4() {
@@ -30,17 +44,36 @@ function uuidv4() {
 
 function CheckoutOrder() {
 	
-
-	var body = `
-			<ul class="nav">
-			  <li><a href="index.html">Home Page</a></li>
-			  <li><a href="OrderProducts.html">Order</a></li>
-			  <li><a href="AllProducts.html">Products</a></li>
-			  <li style="float:right"><a href="https://adultediblesadmin.github.io/AdultEdibles/">About</a></li>
-			</ul>`;
-
-
-	window.open("mailto:Adultediblescatalog@gmail.com?subject=Order Number: " + uuidv4() + "&body=" + encodeURIComponent(body));
+	if (OrderedProductsList.length > 0) {
+		var x = 0;
+		
+		OrderedProductsList.forEach(function(product) {
+			x += product.Quantity;
+		});
+				
+		if (x < 3) {
+			alert("Please selected a minimum of 3 products in your order.");
+			return;
+		}
+		var body = "Please, tell us how you heard about us?\r\n\r\n";
+		
+		body += "Total Order:\r\n";
+		OrderedProductsList.forEach(function(product) {
+			
+			body += `(${product.Quantity}) ${product.Name}: $${product.Price}\r\n`;
+			
+		});
+		
+		body += `\r\n\r\n Total Cost: $${TotalOrderCost}`;
+	
+		body = encodeURIComponent(body);
+	
+		window.open("mailto:Adultediblescatalog@gmail.com?subject=Order Number: " + uuidv4() + "&body=" + body);
+	} else {
+		
+		alert("No products selected.");
+		
+	}
 }
 
 

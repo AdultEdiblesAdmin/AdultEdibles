@@ -1,3 +1,9 @@
+:root {
+  --theme1: #FFFEF1;
+  --theme2: #FE5B8A;
+  --theme3: #5E3D7E;
+}
+	
 	.Image { grid-area: image; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
 	.Title {
 		grid-area: title;
@@ -26,7 +32,7 @@
 	.grid-container .Image, .grid-container .Title,
 	.grid-container .Text, .grid-container .Details
 	{
-		background-color: #FFFEF1;
+		background-color: var(--theme1);
 	}
 	
 	.ProductDivider {
@@ -41,10 +47,10 @@
 	}
 	
 	#ProductName {
-		color: #FE5B8A;
+		color: var(--theme2);
 		text-align: center;
 	}
 	
 	.Details p, .Text p {
-		color: #5E3D7E;
+		color: var(--theme3);
 	}

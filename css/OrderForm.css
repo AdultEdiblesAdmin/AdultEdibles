@@ -1,3 +1,11 @@
+:root {
+  --theme1: #FFFEF1;
+  --theme2: #FE5B8A;
+  --theme3: #5E3D7E;
+}
+
+
+
 .hover_img a { position:relative; }
 .hover_img a span { position:absolute; display:none; z-index:99; }
 .hover_img a:hover span { display:block; }
@@ -46,3 +54,39 @@ td {
 .imageThumbnail {
     max-height: 300px;
 }
+
+.ButtonStyle {
+  	background-color: var(--theme1);
+    color: var(--theme3);
+    border-radius: 12px;
+    padding: 5px;
+    transition-duration: 0.2s;
+}
+
+.ButtonStyle:hover {
+  background-color: var(--theme3);
+  color: var(--theme1);
+}
+
+.CheckoutButton {
+  float: right;
+  font-size: 24pt;
+}
+
+tbody a:visited 
+{
+  color: var(--theme2);
+}
+tbody a:hover 
+{
+  color: var(--theme3);
+}
+
+tbody .THCContent, tbody .Price, tbody .TotalPrice, tbody .Quantity {
+  color: var(--theme3);
+}
+
+tbody tr {
+    background-color: var(--theme1);
+}
+

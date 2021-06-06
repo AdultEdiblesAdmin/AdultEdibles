@@ -59,6 +59,7 @@ function LoadProducts() {
 	
 	var data = JSON.parse(ProductData);
 	
+	data.Products.sort((a, b) => (a.Price < b.Price) ? 1 : -1);
 	data.Products.forEach(AddProductToCatalog);
 
 	

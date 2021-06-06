@@ -1,18 +1,32 @@
 	.Image { grid-area: image; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
-	.Title { grid-area: title; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
+	.Title {
+		grid-area: title;
+		border: 2px solid black;
+		margin: 5px;
+		padding: 5px;
+		border-radius: 10px;
+		display: flex;
+		align-items: center
+	}
 	.Text { grid-area: text; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
 	.Details { grid-area: details; border: 2px solid black; margin: 5px; padding: 5px; border-radius: 10px;}
 	
 	.grid-container {
 		margin-left: 25px;
 		margin-right: 25px;
-	  display: grid;
-	  grid-template-areas:
-		'image title title details details'
-		'image text text details details'
-		'image text text details details'
-		'image text text details details'
-		'image text text details details';
+		display: grid;
+		grid-template-areas:
+		  'image title title details details'
+		  'image text text details details'
+		  'image text text details details'
+		  'image text text details details'
+		  'image text text details details';
+	}
+	
+	.grid-container .Image, .grid-container .Title,
+	.grid-container .Text, .grid-container .Details
+	{
+		background-color: #FFFEF1;
 	}
 	
 	.ProductDivider {
@@ -24,4 +38,13 @@
 
 		max-height:  300px;
 		max-width: 400px;
+	}
+	
+	#ProductName {
+		color: #FE5B8A;
+		text-align: center;
+	}
+	
+	.Details p, .Text p {
+		color: #5E3D7E;
 	}

@@ -30,7 +30,7 @@ function AddProductToList(product, i) {
       .then(data => {
 		
 		var dom = parser.parseFromString(data, 'text/html');
-		var imageLocation = "../Images/" + product.Image;
+		var imageLocation = "../Images/" + product.ImageURL;
 		var price = "$" + parseFloat(product.Price).toFixed(2);
 		$(dom.getElementsByTagName("div")[0]).find("#ImageLocation").attr("src",imageLocation);
 		$(dom.getElementsByTagName("div")[0]).find("#ProductName").text(product.ProductName);
